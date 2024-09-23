@@ -8,7 +8,7 @@ Author: David Morgan (r0m)
 
 ## Files
 
-* [qr_mosaic.bmp](files/qr_mosaic.bmp)
+* [qr_mosaic.bmp](qr_mosaic.bmp)
 
 ## Solution
 

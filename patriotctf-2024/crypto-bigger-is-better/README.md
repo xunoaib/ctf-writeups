@@ -8,7 +8,7 @@ Author: Dylan (elbee3779)
 
 ## Files
 
-* [dist.txt](files/dist.txt)
+* [dist.txt](dist.txt)
 
 ## Solution
 
