@@ -241,7 +241,29 @@ def check_path(path):
         try:
             dec_flag = obj.decrypt(enc_flag)
             if "pctf" in dec_flag:
-                print(dec_flag)
+
+                def get_dir(cur_tile, dst):
+                    d = {
+                        "N": (cur_tile[0] - 1, cur_tile[1]),
+                        "S": (cur_tile[0] + 1, cur_tile[1]),
+                        "E": (cur_tile[0], cur_tile[1] + 1),
+                        "W": (cur_tile[0], cur_tile[1] - 1),
+                        "NE": (cur_tile[0] - 1, cur_tile[1] + 1),
+                        "NW": (cur_tile[0] - 1, cur_tile[1] - 1),
+                        "SE": (cur_tile[0] + 1, cur_tile[1] + 1),
+                        "SW": (cur_tile[0] + 1, cur_tile[1] - 1),
+                    }
+                    d = {v: k for k, v in d.items()}
+                    return d[dst]
+
+                from itertools import pairwise
+                dirs = [get_dir(a, b) for a, b in pairwise(path.path_history)]
+
+                print('Key:', key)
+                print('Moves:', ', '.join(dirs))
+                print()
+                print('Flag:', dec_flag)
+                print()
                 exit(0)
         except Exception:
             pass

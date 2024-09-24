@@ -20,7 +20,10 @@ Author: Christopher Roberts (caffix)
 
 The goal is to discover the correct path to the central shrine, ensuring that none of the puzzle's constraints are violated. While there are many valid paths through the room, only one specific route is correct. The key detail is that the words encountered along this correct path form a decryption key needed to decrypt the flag.
 
-Since we can't determine the correct path in advance, we need to explore all possible routes. Fortunately, the challenge code is structured in a way that makes implementing a search algorithm straightforward, with only minimal adjustments. It almost seems like the challenge was designed for this approach 🤔.
+Since we can't predict the correct path in advance, we need to explore all possible routes. Fortunately, the challenge code is structured in a way that makes implementing a search algorithm rather straightforward, with only minimal adjustments. It's almost like the challenge was designed with this in mind! 🤔
+
+- The decryption key is `vulturesnakearchplantbugstafffooturnShrine`
+- The correct sequence of moves is: `SW, SW, SW, W, W, NW, W, N`
 
 ## Flag
 

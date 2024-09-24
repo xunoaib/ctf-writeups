@@ -28,7 +28,6 @@ Author: [CACI](https://www.caci.com)
 ## Files
 
 * [initial_state.png](initial_state.png)
-
 * [program.txt](program.txt)
 
 ## Solution
