@@ -14,35 +14,33 @@ Author: `_jungbahadurrana`
 
 ## Solution
 
-* [solve.py](solve.py)
+* ⭐ [solve.py](solve.py) ⭐
 
-The goal is to retrieve the flag from the `/admin` endpoint by impersonating the administrator with a forged session cookie. The server [cryptographically signs](https://en.wikipedia.org/wiki/Digital_signature) session cookies using `app.secret_key`, preventing client-side tampering of session data. If we can somehow leak the secret key, we can use it to sign our own session data, allowing the server to trust it as authentic.
+The goal is to retrieve the flag from the `/admin` endpoint by forging a session cookie which impersonates the administrator.
 
-In this challenge, the secret key is derived from the server start time, which is unknown at first. However, the `/status` page reveals the information needed to calculate it. From there, we can replicate the secret key on our end and use it to sign arbitrary session data.
+When users log in, the server generates and signs a session cookie for them using a hidden `app.secret_key` which prevents them from tampering with session data. However, if we can obtain this key, we can craft and sign custom session data that the server will trust.
 
-#### Enumerating Available Endpoints
-- **`/` (GET, POST):** Allows login with any username and password. The session includes a UUID based on the username and a secret.
-- **`/user/<uid>` (GET):** Displays a message for guests.
-- **`/admin` (GET):** Displays the flag if the session's `username` is "administrator" and `is_admin` is `True`.
-- **`/status` (GET):** Provides the server's uptime and current time, indirectly leaking the start time needed to calculate the secret key.
+- The key is based on the server's start time, which can be calculated using data from the `/status` page (`start_time = current_time - uptime`).
+- Once we derive the secret key, we can sign arbitrary session data.
 
-#### Administrator Checks
-To pass the administrator check, the following conditions must be met:
-- `username` must be "administrator."
-- Session must contain `is_admin = True`.
-- Session cookie must be signed with `app.secret_key` to be valid.
+I used [Flask Unsign](https://github.com/Paradoxis/Flask-Unsign) for this challenge. While I imported it as a library in my [solver script](solve.py), it also provides command-line tools.
 
-#### Solution Steps
-1. **Calculate the Secret Key:**
-   - Visit `/status` to retrieve the server's uptime and current time. Calculate the server's start time using this information.
-   - Derive the `app.secret_key` by hashing the start time with the fixed string "secret_key_<start_time>."
+#### Available Endpoints
+- **`/` (GET, POST):** Logs in with any username/password.
+- **`/user/<uid>` (GET):** Displays a guest message.
+- **`/admin` (GET):** Displays the flag if `username = "administrator"` and `is_admin = True`.
+- **`/status` (GET):** Leaks the server's start time.
+
+#### Solution
+
+1. **Derive Secret Key:**
+   - Use the `/status` page to calculate the server’s start time.
+   - Hash the start time with `"secret_key_<start_time>"` to obtain the `app.secret_key` (per the challenge code).
 
 2. **Craft the Cookie:**
-   - Forge a session dictionary containing:
-     - `"is_admin": True`
-     - `"username": "administrator"`
-     - A valid UUID based on the username "administrator" and a not-so-secret UUID (`31333337-1337-1337-1337-133713371337`).
-   - Sign the session cookie with the derived `app.secret_key` using a tool like [flask_unsign](https://github.com/Paradoxis/Flask-Unsign).
+   - Create forged session data: `{"is_admin": True, "username": "administrator", "uid": "02ec19dc-bb01-5942-a640-7099cda78081"}`.
+   - The administrator's UID is generated using `uuid.uuid5(secret, 'administrator')`. The `secret` is hardcoded in their source as `uuid.UUID('31333337-1337-1337-1337-133713371337')`.
+   - Sign the session data using [Flask Unsign](https://github.com/Paradoxis/Flask-Unsign) with the derived `app.secret_key`.
 
-3. **Access Admin Page:**
-   - Send the forged session cookie to `/admin` to access the flag: `PCTF{Imp3rs0n4t10n_Iz_Sup3r_Ezz}`.
+3. **Access Flag:**
+   - Send the signed cookie to `/admin` to retrieve the flag: `PCTF{Imp3rs0n4t10n_Iz_Sup3r_Ezz}`.
