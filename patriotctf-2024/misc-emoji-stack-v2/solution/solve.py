@@ -126,4 +126,4 @@ i = 0
 while i < len(prog):
     i, x, y = execute(i, x, y)
 
-create_image_from_8bit_values(stack)  # CACI{3M0J!==G00D!}
+create_image_from_8bit_values(stack)

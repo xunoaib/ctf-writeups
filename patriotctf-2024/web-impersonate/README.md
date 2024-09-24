@@ -43,4 +43,6 @@ I used [Flask Unsign](https://github.com/Paradoxis/Flask-Unsign) for this challe
    - Sign the session data using [Flask Unsign](https://github.com/Paradoxis/Flask-Unsign) with the derived `app.secret_key`.
 
 3. **Access Flag:**
-   - Send the signed cookie to `/admin` to retrieve the flag: `PCTF{Imp3rs0n4t10n_Iz_Sup3r_Ezz}`.
+   - Send the signed cookie to `/admin` to retrieve the flag.
+
+Flag: `PCTF{Imp3rs0n4t10n_Iz_Sup3r_Ezz}`

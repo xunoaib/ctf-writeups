@@ -28,8 +28,6 @@ As a client, we can craft an HTTP request with the `X-Forwarded-For` header set 
 curl http://chal.competitivecyber.club:8081 -H 'X-Forwarded-For: localhost'
 ```
 
-Sending this request causes the server to display the web page with the flag:
+Sending this request causes the server to display the web page with the flag.
 
-```
-CACI{1_lik3_g1raff3s_4_l0t}
-```
+Flag: `CACI{1_lik3_g1raff3s_4_l0t}``

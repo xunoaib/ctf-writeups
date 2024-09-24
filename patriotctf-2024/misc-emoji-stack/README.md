@@ -45,3 +45,5 @@ Author: [CACI](https://www.caci.com)
 ## Solution
 
 * [solve.py](solve.py)
+
+Flag: `CACI{TUR!NG_!5_R011!NG_!N_H!5_GR@V3}`

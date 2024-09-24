@@ -15,3 +15,5 @@ Author: [Databuoy](https://databuoy.com/)
 ## Solution
 
 * [solve.py](solve.py)
+
+Flag: `PCTF{H@rd_Encryption_is_3asy}`

@@ -26,6 +26,6 @@ b01010000 "
 b01010000 #
 ```
 
-We can collect all of the output values (or all of the inputs), convert them to decimal, then convert those to ASCII to get the flag:
+We can collect all of the output values (or all of the inputs), convert them to decimal, then convert those to ASCII to get the flag.
 
-```PCTF{RTL_i$_D@D_0F_H@rdw@r3}```
+Flag: `PCTF{RTL_i$_D@D_0F_H@rdw@r3}`
