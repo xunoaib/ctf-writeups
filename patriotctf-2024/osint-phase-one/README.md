@@ -20,4 +20,7 @@ Depending on the type of the device, hardware manufacturers in the U.S. must reg
 
 - Perform an FCC product lookup using Google Dorks: `dlink dsl 6300v site:fccid.io`, which leads us to [this page](https://fccid.io/KA2SL6300VA1/User-Manual/User-Manual-1452587).
 - Click on [Internal Photos](https://fccid.io/KA2SL6300VA1/Internal-Photos/Internal-Photos-1452582) to view a photo of the circuit board, revealing a large chip with `ikanos` branding.
-- Flag: `pctf{ikanos}`
+
+## Flag
+
+`pctf{ikanos}`

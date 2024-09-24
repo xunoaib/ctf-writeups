@@ -22,4 +22,6 @@ The goal is to discover the correct path to the central shrine, ensuring that no
 
 Since we can't determine the correct path in advance, we need to explore all possible routes. Fortunately, the challenge code is structured in a way that makes implementing a search algorithm straightforward, with only minimal adjustments. It almost seems like the challenge was designed for this approach 🤔.
 
-Flag: `pctf{Did_you_guess_it_or_apply_graph_algorithms?}`
+## Flag
+
+`pctf{Did_you_guess_it_or_apply_graph_algorithms?}`

@@ -45,4 +45,6 @@ I used [Flask Unsign](https://github.com/Paradoxis/Flask-Unsign) for this challe
 3. **Access Flag:**
    - Send the signed cookie to `/admin` to retrieve the flag.
 
-Flag: `PCTF{Imp3rs0n4t10n_Iz_Sup3r_Ezz}`
+## Flag
+
+`PCTF{Imp3rs0n4t10n_Iz_Sup3r_Ezz}`

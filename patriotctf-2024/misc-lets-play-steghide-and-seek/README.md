@@ -41,3 +41,7 @@ For reference, the underlying command used above was:
 ❯ zbarimg -q flag_qr_code.bmp
 QR-Code:PCTF{QR_M0s41c_St3g0_M4st3r}
 ```
+
+## Flag
+
+`PCTF{QR_M0s41c_St3g0_M4st3r}`

@@ -30,4 +30,6 @@ curl http://chal.competitivecyber.club:8081 -H 'X-Forwarded-For: localhost'
 
 Sending this request causes the server to display the web page with the flag.
 
-Flag: `CACI{1_lik3_g1raff3s_4_l0t}``
+## Flag
+
+`CACI{1_lik3_g1raff3s_4_l0t}``
