@@ -12,8 +12,12 @@ Author: Ryan Wong (shadowbringer007)
 
 ## Solution
 
-The packet capture contains many ICMP requests, each having suspiciously different TTLs in the 95 to 125 range. Decoding these as ASCII reveals: `pctf{time_to_live_exfiltration}`
+The packet capture contains many ICMP requests, each having suspiciously different TTLs in the 95 to 125 range. Decoding these as ASCII reveals the flag!
 
 ```bash
 tshark -r exfiltration_activity_pctf_challenge.pcapng -Y "icmp.type == 8" -T fields -e ip.ttl  | awk '{ printf "%c", $1 }'
 ```
+
+## Flag
+
+`pctf{time_to_live_exfiltration}`
