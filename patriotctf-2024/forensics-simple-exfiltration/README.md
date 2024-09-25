@@ -8,7 +8,7 @@ Author: Ryan Wong (shadowbringer007)
 
 ## Files
 
-* [exfiltration_activity_pctf_challenge.pcapng](files/exfiltration_activity_pctf_challenge.pcapng)
+* [exfiltration_activity_pctf_challenge.pcapng](exfiltration_activity_pctf_challenge.pcapng)
 
 ## Solution
 
