@@ -12,7 +12,7 @@ Author: David Morgan (r0m)
 
 ## Solution
 
-* [Solution](solve/)
+* [Solution Scripts](solve/)
 
 1. I first split the image up into smaller tiles, one for each QR code, then used various image processing techniques to decode all 1000 QR codes from the mosaic. I struggled to find a reliable way to decode all of them in one go, so I used a multi-stage approach to decode as many as possible at a time, passing along any failed images to more customized scripts.
 

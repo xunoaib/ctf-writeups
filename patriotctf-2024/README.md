@@ -9,6 +9,7 @@
 | :mag: forensics | [Simple Exfiltration](./forensics-simple-exfiltration/README.md) | ![Easy](https://img.shields.io/badge/Easy-009900) | 100 | 287 |
 | :game_die: misc | [Emoji Stack](./misc-emoji-stack/README.md) | ![Easy](https://img.shields.io/badge/Easy-009900) | 100 | 422 |
 | :game_die: misc | [Emoji Stack V2](./misc-emoji-stack-v2/README.md) | ![Medium](https://img.shields.io/badge/Medium-ffdd00) | 290 | 105 |
+| :game_die: misc | [Let's Play \[steg\]Hide & Seek](./misc-lets-play-steghide--seek/README.md) | ![Medium](https://img.shields.io/badge/Medium-ffdd00) | 402 | 49 |
 | :game_die: misc | [Making Baking Pancakes](./misc-making-baking-pancakes/README.md) | ![Easy](https://img.shields.io/badge/Easy-009900) | 100 | 310 |
 | :game_die: misc | [RTL Easy](./misc-rtl-easy/README.md) | ![Easy](https://img.shields.io/badge/Easy-009900) | 318 | 91 |
 | :game_die: misc | [RTL Warm up](./misc-rtl-warm-up/README.md) | ![Beginner](https://img.shields.io/badge/Beginner-brightgreen) | 100 | 533 |
