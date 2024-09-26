@@ -4,12 +4,12 @@
 
 | Name                                     | Category                   | Points | Solves |
 |------------------------------------------|----------------------------|--------|--------|
-| [filter'd](filterd/README.md)            | pyjail/introductory/golf   | 125    | 126    |
-| [get and call](filterd/README.md)        | pyjail/introductory        | 1068   | 22     |
-| [no nonsense](no-nonsense/README.md)     | pyjail/introductory        | 709    | 44     |
-| [parity 1](parity-1/README.md)           | pyjail/introductory        | 219    | 90     |
-| [parity 2](parity-2/README.md)           | pyjail/introductory        | 758    | 41     |
-| [pickled magic](pickled-magic/README.md) | pyjail/pickle/introductory | 758    | 41     |
+| [filter'd](filterd)            | pyjail/introductory/golf   | 125    | 126    |
+| [get and call](get-and-call)   | pyjail/introductory        | 1068   | 22     |
+| [no nonsense](no-nonsense)     | pyjail/introductory        | 709    | 44     |
+| [parity 1](parity-1)           | pyjail/introductory        | 219    | 90     |
+| [parity 2](parity-2)           | pyjail/introductory        | 758    | 41     |
+| [pickled magic](pickled-magic) | pyjail/pickle/introductory | 758    | 41     |
 
 <details>
 <summary>Other Challenges</summary>
